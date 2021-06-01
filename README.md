@@ -12,13 +12,6 @@ git clone https://github.com/palmex/virtualpt
 
 ## Usage
 
-```python
-import repo
-
-foobar.pluralize('word') # returns 'words'
-foobar.pluralize('goose') # returns 'geese'
-foobar.singularize('phenomena') # returns 'phenomenon'
-```
 
 ## Contributing
 Before making any changes, fork a branch and label it with existingBranch-featureName. This will make merging a lot easier. 
