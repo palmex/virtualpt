@@ -6,7 +6,11 @@
  * @flow strict-local
  */
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import {connect} from 'react-redux';
+import Camera  from './components/Camera';
+
+import { PERMISSIONS, check, request } from 'react-native-permissions'
 import type {Node} from 'react';
 import {
   SafeAreaView,
@@ -59,6 +63,7 @@ const App: () => Node = () => {
     backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
   };
 
+
   return (
     <SafeAreaView style={backgroundStyle}>
       <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
@@ -70,7 +75,14 @@ const App: () => Node = () => {
           style={{
             backgroundColor: isDarkMode ? Colors.black : Colors.white,
           }}>
-          <Section title="Step One">
+          <Section>
+          <Camera style={{flex: 1}}></Camera>
+          </Section>
+          <Section>
+          <Text>Camera Access</Text>
+          {PERMISSIONS.IOS.CAMERA ? <Text>ON</Text> : <Text>OFF</Text>}
+          </Section>
+          <Section title="Give me a call when you see">
             Edit <Text style={styles.highlight}>App.js</Text> to change this
             screen and then come back to see your edits.
           </Section>

@@ -2,7 +2,10 @@
 
 This is the repository for building the Virtual Physical Therapy
 
-## Installation
+## Usage
+The repo is mainly split into the frontend application (MyTestApp) and the backend. 
+
+## React Native Installation
 
 Clone this [repo](https://github.com/palmex/virtualpt) to get started.
 
@@ -10,7 +13,23 @@ Clone this [repo](https://github.com/palmex/virtualpt) to get started.
 git clone https://github.com/palmex/virtualpt
 ```
 
-## Usage
+For iOS demo (you need to have XCode installed)
+
+
+```bash
+brew install node
+brew install watchman
+
+```
+For Android and more see React Native [docs](https://reactnative.dev/docs/environment-setup)
+
+
+```bash
+sudo gem install cocoapods
+```
+[Solution](https://stackoverflow.com/questions/20939568/error-error-installing-cocoapods-error-failed-to-build-gem-native-extension) for cocaopods problems
+
+
 
 
 ## Contributing
